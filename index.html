@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--defining charset and viewport properties-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--page tab title-->
+    <title>My Github</title>
+    <!--external css-->
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+
+<body>
+
+<!--the center box wrapper-->
+<div class="main">
+    <!--the left wrapper for profile-->
+    <div class="content profile-content">
+        <!--first row-->
+        <div class="row margin-bot">
+            <!--user avatar-->
+            <div class="avatar">
+                <!--set to empty avatar at first-->
+                <img id="avatar" src="resources/avatar.png" alt="User Avatar">
+            </div>
+            <!--user info-->
+            <ul>
+                <li id="user_name">
+                    [Name]
+                </li>
+                <li id="user_blog">
+                    [Blog]
+                </li>
+                <li id="user_location">
+                    [Location]
+                </li>
+            </ul>
+        </div>
+
+        <!--second row-->
+        <div class="row">
+            <!--user bio-->
+            <div id="user_bio">
+                [Bio]
+            </div>
+        </div>
+    </div>
+    <!--the right wrapper for input-->
+    <div class="content input-content">
+        <!--a form which is controlled by js-->
+        <form id="input_form" class="input-form" action="#">
+            <!--Username label-->
+            <label for="username">Username:</label>
+            <input id="username" name="username" type="text" placeholder="Username">
+            <input  type="submit" value="Submit">
+        </form>
+        <div id="error"></div>
+    </div>
+</div>
+
+<!--external js-->
+<script type="text/javascript" src="resources/main.js"></script>
+</body>
+
+</html>

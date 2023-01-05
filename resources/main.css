@@ -1,0 +1,134 @@
+/*selecting everything*/
+* {
+    /*borders and paddings are included in the width & height of the elements*/
+    box-sizing: border-box;
+    /*changing font family for the entire site (fallback font = sans-serif)*/
+    font-family: Arial, sans-serif;
+}
+
+/*selecting <body> tag*/
+body {
+    /*---full centralized background---*/
+    /*relative image url*/
+    background-image: url("background.jpg");
+    /*no repeating over x-axis or y-axis*/
+    background-repeat: no-repeat;
+    /*centralize background base position (on lower screens, the center of the background is always shown)*/
+    background-position: center;
+    /*background always stays fixed no matter what (e.g. in scrolling)*/
+    background-attachment: fixed;
+    /*scaling background to always cover the whole specified area (=the whole page)*/
+    background-size: cover;
+    /*font size for texts*/
+    font-size: 1.3em;
+}
+
+/*no bullets for unordered lists, also centering them*/
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+/*vertical paddings for ul list items*/
+li {
+    /*4px padding for top & bot, and 0 for left & right*/
+    padding: 4px 0;
+}
+
+/*selecting class="main"*/
+/*the whole website main wrapper*/
+.main {
+    /*positioning the content in the center of the screen*/
+    position: absolute;
+    /*method 1: (50% margin from corner, and then pulling it back to counter for the element size itself)*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%) translateY(-50%);*/
+    /*method 2: 25% left + 50% width + 25% right*/
+    top: 25%;
+    left: 25%;
+    /*using flex to design layout*/
+    display: flex;
+    /*elements take place horizontally (left and right)*/
+    flex-direction: row;
+}
+
+/*selecting class content*/
+/*the profile and input common content wrapper*/
+.content {
+    /*round corners*/
+    border-radius: 10px;
+    /*transparent box background color*/
+    background: rgba(200,200,200,0.7);
+}
+
+/*selecting class profile-content*/
+.profile-content {
+    /*space between right and left content wrappers*/
+    margin-right: 4%;
+    /*padding for better visibility*/
+    padding: 15px;
+}
+
+/*selecting class row*/
+.row{
+    /*a row is a horizontal flex*/
+    display: flex;
+    flex-direction: row;
+}
+
+.margin-bot {
+    /*making space between top element with top edge and bot element with bot edge and top with both*/
+    margin-bottom: 20px;
+}
+
+.avatar {
+    /*set max width for avatar so big pictures doesnt take the whole screen*/
+    max-width: 256px;
+    /*black round borders around avatar*/
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/*selecting <img> tags inside avatar class*/
+.avatar>img {
+    /*the image should be the size of frame div*/
+    width: 100%;
+}
+
+/*selecting class input-content*/
+.input-content {
+    /*padding for better visibility*/
+    padding: 30px;
+}
+
+.input-form {
+    /*using flex to design layout*/
+    display: flex;
+    /*form elements take place vertically*/
+    flex-direction: column;
+    /*space evenly before and after and between form elements*/
+    justify-content: space-evenly;
+    /*form should take the whole vertical space of the input-content wrapper*/
+    height: 95%;
+    /*show Username label text in the center*/
+    text-align: center;
+}
+
+/*selecting id="user_bio"*/
+#user_bio {
+    /*making it at most the same width of the avatar's width*/
+    max-width: 256px;
+    /*a little smaller font size than normal (1em)*/
+    font-size: 0.9em;
+}
+
+/*selecting id="user_bio"*/
+#error {
+    /*error text color is red*/
+    color: red;
+    /*smaller font size*/
+    font-size: 0.7em;
+    /*making error text center*/
+    text-align: center;
+}
